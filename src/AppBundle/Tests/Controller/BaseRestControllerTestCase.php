@@ -5,7 +5,7 @@ namespace AppBundle\Tests\Controller;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\HttpFoundation\Response;
 
-class BaseRestControllerTest extends WebTestCase
+class BaseRestControllerTestCase extends WebTestCase
 {
     protected function getResponseData(Response $response)
     {

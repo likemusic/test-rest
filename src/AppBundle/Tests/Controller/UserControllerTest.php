@@ -4,7 +4,7 @@ namespace AppBundle\Tests\Controller;
 
 use AppBundle\DataFixtures\ORM\UserFixtures;
 
-class UserControllerTest extends BaseRestControllerTest
+class UserControllerTest extends BaseRestControllerTestCase
 {
     public function testLoginAdmin()
     {

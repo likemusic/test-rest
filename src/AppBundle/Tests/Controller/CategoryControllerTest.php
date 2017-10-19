@@ -4,7 +4,7 @@ namespace AppBundle\Tests\Controller;
 
 use AppBundle\DataFixtures\ORM\UserFixtures;
 
-class CategoryControllerTest extends BaseRestControllerTest
+class CategoryControllerTest extends BaseRestControllerTestCase
 {
     private $accessMap = [
         UserFixtures::ADMIN => [
@@ -67,6 +67,10 @@ class CategoryControllerTest extends BaseRestControllerTest
 
     private function getClientApiKey($userType)
     {
+        if ($userType == UserFixtures::ANONYMOUS) {
+            return null;
+        }
+
         $response = $this->request('POST', '/user/login', [
             'username' => $userType,
             'password' => $userType,
